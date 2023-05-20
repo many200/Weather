@@ -7,11 +7,23 @@
 body{
     background: #222;
 }
+.start{
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+.start span{
+    color: aqua;
+}
+.start h1 {
+    color: #ebfffc;
+}
 .card{
     width:90% ;
     background: linear-gradient(135deg, aqua, rgb(43, 126, 126));
     color: #fff;
-    margin: 100px auto 0;
+    margin: 50px auto 0;
     border-radius: 20px;
     padding: 40px 35px;
     text-align: center;
@@ -30,7 +42,7 @@ body{
     padding: 10px 25px;
     height: 60px;
     border-radius: 30px;
-    flex: auto;
+    flex: 1;
     font-size:18px ;
 }
 .search button{
@@ -93,3 +105,56 @@ body{
     color: red;
     display: none;
 }
+section{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10rem 9%;
+   color: #ebfffc;
+
+}
+.footer p {
+    font-size: 1.6rem;
+}
+.footer-iconTop a{
+display: inline-flex;
+justify-content: center;
+align-items: center;
+padding: .8rem;
+background: var(--min-color);
+border-radius: .8rem;
+transition: .5s ease;
+}
+.footer-iconTop a:hover{
+    box-shadow: 0 0 1rem var(--min-color);
+}
+.footer-iconTop a i {
+    font-size: 2.4rem;
+    color: var(--second-bg-color);
+}
+@media screen and (max-width: 600px) {
+    body{
+        overflow-x: hidden;
+        /* overflow-y: hidden; */
+    }
+    .search input {
+        width: 50%;
+    }
+    .footer {
+        
+        /* padding: 30rem 9%; */
+        margin-top: 100px;
+     
+    }
+    .footer p{
+        
+     font-size: 1.1rem;   
+     
+    }
+  }

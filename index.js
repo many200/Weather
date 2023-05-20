@@ -6,7 +6,13 @@
     const weatherIcon = document.querySelector(".weather-icon")
     const weather = document.querySelector(".weather")
     const error = document.querySelector(".error")
+    const btnLight = document.querySelector(".btn .btn-light")
+    const btnDark = document.querySelector(".btn .btn-dark")
+    const title = document.querySelector(" .title")
+    const span = document.querySelector(" .title span")
+    const footer = document.querySelector(" .footer ")
     async function checkWeather(city){
+  
         const responce = await fetch(apiUrl + city +`&appid=${apiKey}`)
         if (responce.status == 404) {
             error.style.display = "block"
@@ -68,5 +74,20 @@
         }
         
     })
-   
+   btnLight.addEventListener("click", () =>{
+    document.body.style.background = "white"
+    title.style.color = "black"
+    footer.style.color = "black"
+    span.style.color = "black"
+    
+    
+   })
+   btnDark.addEventListener("click", () =>{
+    document.body.style.background = "#222"
+    title.style.color = "white"
+    footer.style.color = "white"
+    span.style.color = "aqua"
+    
+    
+   })
 
